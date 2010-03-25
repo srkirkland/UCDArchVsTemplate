@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UCDArchVsTemplate", "UCDArchVsTemplate\UCDArchVsTemplate.csproj", "{EC544EB8-C089-4631-9A27-2D31D8429078}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UCDArchVsTemplate.Tests", "UCDArchVsTemplate.Tests\UCDArchVsTemplate.Tests.csproj", "{22455FDD-25AB-450B-B406-CBF038361AB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC544EB8-C089-4631-9A27-2D31D8429078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC544EB8-C089-4631-9A27-2D31D8429078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC544EB8-C089-4631-9A27-2D31D8429078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC544EB8-C089-4631-9A27-2D31D8429078}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22455FDD-25AB-450B-B406-CBF038361AB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22455FDD-25AB-450B-B406-CBF038361AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22455FDD-25AB-450B-B406-CBF038361AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22455FDD-25AB-450B-B406-CBF038361AB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
