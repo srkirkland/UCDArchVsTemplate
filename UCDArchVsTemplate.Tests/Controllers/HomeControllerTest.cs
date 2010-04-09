@@ -1,37 +1,63 @@
 ﻿using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MvcContrib.TestHelper;
+using UCDArch.Testing;
 using UCDArchVsTemplate.Controllers;
+using System.Web.Routing;
 
 namespace UCDArchVsTemplate.Tests.Controllers
 {
     [TestClass]
-    public class HomeControllerTest
+    public class HomeControllerTest : ControllerTestBase<HomeController>
     {
+        protected override void SetupController()
+        {
+            Controller = new HomeController();
+        }
+
+        protected override void RegisterRoutes()
+        {
+            RouteTable.Routes.Clear();
+            RouteRegistrar.RegisterRoutesTo(RouteTable.Routes);
+        }
+
         [TestMethod]
         public void Index()
         {
             // Arrange
-            HomeController controller = new HomeController();
+            var controller = new HomeController();
 
             // Act
-            ViewResult result = controller.Index() as ViewResult;
+            var result = controller.Index() as ViewResult;
 
             // Assert
-            ViewDataDictionary viewData = result.ViewData;
-            Assert.AreEqual("Welcome to ASP.NET MVC!", viewData["Message"]);
+            result.AssertViewRendered();
         }
 
         [TestMethod]
         public void About()
         {
             // Arrange
-            HomeController controller = new HomeController();
+            var controller = new HomeController();
 
             // Act
-            ViewResult result = controller.About() as ViewResult;
+            var result = controller.About() as ViewResult;
 
             // Assert
             Assert.IsNotNull(result);
         }
+
+        [TestMethod]
+        public void RootShouldMapToIndex()
+        {
+            "~/".ShouldMapTo<HomeController>(x => x.Index());
+        }
+
+        [TestMethod]
+        public void AboutShouldRouteToHomeAbout()
+        {
+            "~/Home/About".ShouldMapTo<HomeController>(x => x.About());
+        }
+
     }
 }
