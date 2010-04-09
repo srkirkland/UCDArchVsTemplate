@@ -117,6 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Scripts\xVal.jquery.validate.js" />
     <Content Include="Web.config" />
     <Content Include="Css\Site.css" />
     <Content Include="Scripts\jquery-1.4.1.js" />
