@@ -1,9 +1,11 @@
 ﻿using System.Web.Mvc;
+using UCDArch.Web.Controller;
+using UCDArch.Web.Attributes;
 
 namespace UCDArchVsTemplate.Controllers
 {
-    [HandleError]
-    public class HomeController : Controller
+    [HandleTransactionsManually]
+    public class HomeController : SuperController
     {
         public ActionResult Index()
         {
